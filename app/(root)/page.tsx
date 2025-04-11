@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import InterviewCard from "@/components/InterviewCard";
+import { getCurrentUser } from "@/lib/actions/auth.action";
 import {
-  getCurrentUser,
   getInterviewByUserId,
   getLatestInterview,
-} from "@/lib/actions/auth.action";
+} from "@/lib/actions/general.action";
 
 const Page = async () => {
   const user = await getCurrentUser();
