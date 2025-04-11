@@ -20,7 +20,7 @@ const Page = async ({ params }: RouteParams) => {
 
   const feedback = await getFeedbackByInterviewId({
     interviewId: id,
-    userId: user?.id!,
+    userId: user?.id || "",
   });
 
   console.log(feedback);
@@ -55,10 +55,10 @@ const Page = async ({ params }: RouteParams) => {
           </div>
         </div>
         <hr />
-        <p>{feedback.finalAssessment}</p>
+        <p>{feedback?.finalAssessment || "No assessment available"}</p>
         <div className="flex flex-col gap-4">
           <h2>Breakdown of the Interview:</h2>
-          {feedback?.categoryScore?.map((category, index) => (
+          {feedback?.categoryScores?.map((category, index) => (
             <div key={index}>
               <p className="font-bold">
                 {index + 1}. {category.name} ({category.score}/100)
@@ -70,7 +70,7 @@ const Page = async ({ params }: RouteParams) => {
         <div className="flex flex-col gap-3">
           <h3>Strenghts</h3>
           <ul>
-            {feedback?.strenghts?.map((strenght, index) => (
+            {feedback?.strengths?.map((strenght, index) => (
               <li key={index}>{strenght}</li>
             ))}
           </ul>
