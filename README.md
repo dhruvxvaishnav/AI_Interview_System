@@ -1,36 +1,200 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎯 WisePrep
 
-## Getting Started
+**A modern AI-powered job interview preparation platform**
 
-First, run the development server:
+WisePrep is an innovative web application that helps job seekers practice and improve their interview skills through AI-powered voice conversations. Get real-time feedback, track your progress, and boost your confidence before your next big interview.
 
+---
+
+## 🚀 Project Description
+
+**AI-powered interview preparation platform built with Next.js, Firebase, and Vapi voice agents. Practice mock interviews, receive instant AI feedback, and track your progress with a modern, responsive interface.**
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: Next.js, TailwindCSS, shadcn/ui
+- **Backend**: Next.js API Routes
+- **Database & Auth**: Firebase
+- **AI Integration**: Vapi AI Voice Agents, Google Gemini
+- **Validation**: Zod
+- **Styling**: Tailwind CSS
+
+---
+
+## ✨ Features
+
+### 🔐 **Authentication**
+- Secure email/password authentication
+- User session management with Firebase
+
+### 🎤 **AI Interview Practice**
+- Real-time voice conversations with AI agents
+- Dynamic question generation based on job roles
+- Natural conversation flow with intelligent responses
+
+### 📊 **Instant Feedback**
+- Detailed analysis of your interview performance
+- Actionable suggestions for improvement
+- Performance scoring and insights
+
+### 📱 **Modern Interface**
+- Clean, intuitive user experience
+- Fully responsive design for all devices
+- Dark/light mode support
+
+### 📈 **Progress Tracking**
+- Personal dashboard to manage interviews
+- Interview history and analytics
+- Performance trends over time
+
+---
+
+## 🛠️ Installation & Setup
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+- Git
+
+### 1. Clone the Repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [your-repo-link]
+cd WisePrep
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Environment Setup
+Create a `.env.local` file in the root directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+# Vapi Configuration
+NEXT_PUBLIC_VAPI_WEB_TOKEN=your_vapi_token
+NEXT_PUBLIC_VAPI_WORKFLOW_ID=your_workflow_id
 
-## Learn More
+# Google AI
+GOOGLE_GENERATIVE_AI_API_KEY=your_gemini_api_key
 
-To learn more about Next.js, take a look at the following resources:
+# Application
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Firebase Configuration
+NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_project_id
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Firebase Admin (Server-side)
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_CLIENT_EMAIL=your_service_account_email
+FIREBASE_PRIVATE_KEY=your_private_key
+```
 
-## Deploy on Vercel
+### 4. Run the Development Server
+```bash
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 📁 Project Structure
+
+```
+WisePrep/
+├── app/                    # Next.js app directory
+│   ├── (auth)/            # Authentication pages
+│   ├── (root)/            # Main application pages
+│   ├── api/               # API routes
+│   └── globals.css        # Global styles
+├── components/            # Reusable UI components
+├── lib/                   # Utility functions and configurations
+├── public/               # Static assets
+└── ...config files
+```
+
+---
+
+## 🔧 Key Components
+
+### Authentication System
+- Firebase Auth integration
+- Protected routes and middleware
+- User session management
+
+### Interview Engine
+- Vapi AI voice agent integration
+- Google Gemini for question generation
+- Real-time conversation handling
+
+### Feedback System
+- AI-powered performance analysis
+- Detailed scoring algorithms
+- Improvement recommendations
+
+---
+
+## 🚀 Deployment
+
+### Using Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically on every push
+
+### Using Other Platforms
+The application can be deployed on any platform that supports Next.js:
+- Netlify
+- Railway
+- DigitalOcean App Platform
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit issues and enhancement requests.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- [Vapi AI](https://vapi.ai/) for voice agent technology
+- [Google Gemini](https://gemini.google.com/) for AI capabilities
+- [Firebase](https://firebase.google.com/) for backend services
+- [shadcn/ui](https://ui.shadcn.com/) for UI components
+
+---
+
+## 📞 Contact
+
+Dhruv Vaishnav - dhruvvaishnav687@gmail.com
+
+Project Link: https://github.com/dhruvxvaishnav/AI_Interview_System
+
+---
+
+<div align="center">
+
+**⭐ Star this repository if you found it helpful!**
+
+</div>
